@@ -26,7 +26,7 @@ pipeline {
                 }
                 
                 // Deploy the application to Azure Web App using Azure CLI plugin
-                sh 'az webapp deploy --name "${AZURE_WEBAPP_NAME}" --resource-group "${AZURE_RESOURCE_GROUP}" --type jar --src-path target/*.jar'
+                sh 'az webapp deploy --name "${AZURE_WEBAPP_NAME}" --resource-group "${AZURE_RESOURCE_GROUP}" --type war --src-path target/java-hello-world.war'
             }
         }
     }
