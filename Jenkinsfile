@@ -26,7 +26,7 @@ pipeline {
                     azureKeyVaultServiceEndpoint: "${AZURE_CREDENTIALS_ID}",
                     keyVaultName: "${AZURE_KEYVAULT_NAME}",
                     secrets: [
-                        azureKeyVaultSecret(secretName: "${AZURE_SECRET_NAME}", variable: 'SECRET_VALUE')
+                        azureKeyVault(secretName: "${AZURE_SECRET_NAME}", variable: 'SECRET_VALUE')
                     ]
                 ])]) {
                     // Authenticate with Azure using the Azure CLI plugin and the configured service principal credentials
