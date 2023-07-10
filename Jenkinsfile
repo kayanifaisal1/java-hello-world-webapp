@@ -22,7 +22,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                withCredentials([azureKeyVaultSecret(credentialsId: "${AZURE_CREDENTIALS_ID}", secretName: "${AZURE_SECRET_NAME}", vaultName: "${AZURE_KEYVAULT_NAME}", variable: 'SECRET_VALUE')]) {
+                withCredentials([azureKeyVault(credentialsId: "${AZURE_CREDENTIALS_ID}", secretName: "${AZURE_SECRET_NAME}", vaultName: "${AZURE_KEYVAULT_NAME}", variable: 'SECRET_VALUE')]) {
                     // Authenticate with Azure using the Azure CLI plugin and the configured service principal credentials
                     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID'
                     
