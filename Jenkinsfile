@@ -6,8 +6,7 @@ pipeline {
         AZURE_WEBAPP_NAME = 'azure-jenk'
         AZURE_CREDENTIALS_ID = '1523195a-5e0d-4e7e-ba88-a168cdffd973'
         AZURE_KEYVAULT_NAME = 'azurejenk'
-        AZURE_SECRET_NAME = '1e10ad2b-6b30-4799-8347-a32a3515539b
-'
+        AZURE_SECRET_NAME = '1e10ad2b-6b30-4799-8347-a32a3515539b'
     }
     
     stages {
